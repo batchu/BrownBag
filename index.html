@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>Angular JS Framework - How to do a Modular MVC Application</title>
+		<title>BrownBag</title>
 
 		<meta name="description" content="BrownBag - Changing landscape of Front End Web Dev">
 		<meta name="author" content="Prashanth Batchu">
@@ -43,9 +43,9 @@
 			<div class="slides">
                              <section>
                     <!--<h1>Angular.js</h1>-->
-                    <!--<img src="img/ang-pres/ang-pres/angularjs.jpeg"/>-->
+                    <img src="img/title.png"/>
                     <h3>Front End Web Dev</h3>
-                    <h4>The changing trends</h4>
+                    <h4>The changing Landscape</h4>
                     <p>
                         <small>Prashanth Batchu (Enterprise Web Development Team)</small>
                         <br /><small>November 20, 2013</small>
@@ -90,7 +90,7 @@
                             <li>AngularJS - Context & Core Philosophy</li>
                             <li></li>
                         </ul>
-                        <li></li>
+                        <li>Challenges</li>
                         <li>Q&A</li>
 
                     </ul>
@@ -104,19 +104,136 @@
                                 This is the paradigm shift in the the way we use JavScript which will be the focus of this presentation.
                             </li>
                             <li>Numerous javascript based projects have sprung up  including Ember, AngularJS, Backbone etc. We will closely study Angular JS, a meta framework called neatly showcases the paradigm shift in the way we can use javascript.</li>
-                            <li>We will talk about what AngularJS brings to the table, its core philosophy and way it addresses the problems that Front End developers have been facing because of the limitations of HTML. AngularJS takes a completely different approach while focusing on reusability, testability and maintainability. We will then discuss some challenges that this paradigm shift provides</li>
+                            <li>We will talk about what AngularJS brings to the table, its core philosophy and way it addresses the problems that Front End developers have been facing because of the limitations of HTML. AngularJS takes a completely different approach while focusing on reusability, testability and maintainability. We will then discuss some challenges that this paradigm shift creates</li>
                         </ul>
 
                     </aside>
 
-                </section>           
+                </section>  
+                            
+                            <section>   
+                       <section>
+                        <h3>HTML - The original intent</h3>
+                        <table>
+
+                            <tr>
+
+                                <td width='50%'><img src='img/ang-pres/firstWeb.png' />
+                                    <span class="fragment">1993</span>
+
+                                </td>
+                                <td> <img  src='img/ang-pres/modernWeb.png' />
+                                    <span class="fragment"> The present</span>
+
+                                </td>
+
+                            </tr>
+                        </table>
+
+                        <aside class="notes">
+                            <ul>
+                                <li>What have we got here?</li>
+                                <li>We have two webpages displayed here. One of these two pages has quite a bit of significance. </li>
+                                <li> Can anyone tell me the page I'm talking about and why it is significant?</li>
+                                <li>The page on the left is the first web page ever created! In 1993.</li>
+                                <li>It's just a static html page with links to more pages. Nothing interesting </li>
+                                <li>The page on the right shows an IDE/li>
+                                <li>Fast forward to 2013 and we now have a full blown IDE running inside a browser!</li>
+                                <li>So you might be wondering what the problem is. We will get to that in a bit./li>
+                                      <li>But the key takeaway from this slide is that HTML was originally designed to show static documents on the web and not much more.</li>
+                                      <li>Now lets take a quick look at the milestones of HTML5</li>
+                            </ul>
+                        </aside>
+                    </section>  
+                                <section>
+                                    <h3>HTML Milestones</h3>
+                                    <ul>
+                                        <li>1989: Tim Berners-Lee invents the Web with HTML as its publishing language</li>
+                                        <li>Late 1994: The World Wide Web Consortium forms</li>
+                                        <li>November 1995: Vendors unite to form a new group dedicated to developing an HTML standard which will be dismantled in a couple of years since then</li>
+                                        <li>November 1995: Style sheets for HTML documents begin to take shape</li>
+                                        <li>December 1997: HTML 4.0 was published as a W3C Recommendation</li>
+                                        <li>January 2008: HTML5 was published as a Working Draft (link) by the W3C - Still a work in progress</li>
+                                        <li>September 2012: W3C proposed a plan[29] to release a stable HTML5 Recommendation by the end of 2014 and an HTML 5.1 specification Recommendation by the end of 2016</li>
+                                    </ul>
+                                    <aside class="notes">
+                                        These milestones are familiar to us. So briefly speaking, HTML since its widespread adaption in the 90s hasn't changed much till 2008 with the inception of HTML5. I did not mention the failed xhtml branch as it has no significance anymore. Let's quickly review HTML5.
+                                    </aside>
+                                </section>
+                                <section>
+                                    <h3>HTML5</h3>
+                                    <img src='img/html5.png' /><br />
+                              What's new?  HTML expanded to support new APIs
+                                   
+                                </section>
+                                <section>
+                                    <h3>Summarizing HTML5</h3>
+                                    <img src='img/flash.png' />
+                                    <ul>
+                                        <li>Too little too late?</li>
+                                        <li>Necessary but not sufficient?</li>
+                                        <li>HTML5 - The broken promises? </li>
+                                    </ul>
+                                    <aside class="notes">
+                                        HTML5 development has been a big mess so far. I guess these are some ways to summarize how the HTML5 development was handled so far. Cris Heilmann of Mozilla foundation gave a talk titled "HTML5 - The broken promises" to talk about HTML5 misadventures. We need to review one more item to get to the crux of this Brownbag's topic. That item is JavaScript. Let's review that now.
+                                    </aside>
+                                </section>
+                            </section>
+                            <section>
+                                <section>
+                                    <h3>JavaScript Origins</h3>
+                                    <ul>
+                                        <li>May 1995: Created in 10 days by Brendan Eich</li>
+                                        <li>1996 - 1997: Taken to ECMA to carve out a standard specification. ECMAScript v2 in 1998, v3 in 1999</li>
+                                        <li>2001:  Douglas Crockford named and documented JSON (JavaScript Object Notation) – a Lisp-inspired idea to use JavaScript syntax to store data in text format. </li>
+                                        <li>2005: Jesse James Garrett coins the term AJAX.  Renaissance period of JavaScript usage spearheaded by open source libraries such as Prototype, jQuery, Dojo, Mootols etc.</li>
+                                        <li>2007: Webkit becomes the foundation of the mobile web</li>
+                                        <li>2009: Node.js - JavaScript on the server</li>
+                                        <li>2009 to Present - Paradigm shift in the way we use JavaScript</li>
+                                        <li></li>
+                                    </ul>
+                                    <aside class="notes">
+                                    </aside>
+                                </section>
+                                <section>
+
+                                </section>
+                            </section>
+                            <section>
+                        <h4>HTML & JavaScript Origins</h4>
+                        <ul>
+                          
+                            <li>But we want Desktop style apps. We get then by either
+
+                                <ul>
+                                    <li>Abstracting away HTML, CSS, and/or JavaScript (GWT, Vaadin etc)</li>
+                                    <li>Manipulating the DOM (JQuery)</li>
+                                </ul>
+                            </li>
+                            <li>Neither of these address the root problem that HTML was not designed for dynamic views.</li>
+
+                        </ul>
+
+                        <aside class="notes">
+                            <ul> <li>The web has enabled businesses to connect to its users with just a browser. And as we all know browsers can only understand HTML, CSS and Javascript.
+
+
+                                </li>
+                              
+                                <li>  
+                                    So we use certain frameworks to deal with HTML’s shortcomings by either abstracting away from HTML, CSS, and/or JavaScript ( using GWT, Vaadin etc) or by manipulating the DOM (JQuery is a prime example for that).</li>
+                                <li>Neither of these address the root problem that HTML is not designed for dynamic views. This is a problem angular tries to solve</li>
+                            </ul>
+
+                        </aside>
+                    </section>
                             
                     <section><h3>Quick review of Angular</h3>
 
                     <blockquote>
                         &ldquo;AngularJS is a structural meta framework for developing modern dynamic web applications&rdquo;
                     </blockquote>
-                    <img src='img/ang-pres/spa.png' />
+                    <img src='img/ang-pres/ang-pres/spa.png' />
                     <!--                                <ul>
                                                         <li>Data Binding. No more DOM manipulation</li>
                                                         <li>Reusability of code through Directives</li>
@@ -156,8 +273,8 @@
                     </section>
                     <section>
                         <h4>Angular supports Two way Data Binding</h4>
-                        <img src='img/ang-pres/One_Way_Data_Binding.png' />
-                        <img src='img/ang-pres/2wayDataBinding.png' />
+                        <img src='img/ang-pres/ang-pres/One_Way_Data_Binding.png' />
+                        <img src='img/ang-pres/ang-pres/2wayDataBinding.png' />
                         <ul>
                             <li>Data-binding: Automatic synchronization of data between the model and view components. </li>
                             <li>Treat the model as the single-source-of-truth in your application. </li>
@@ -169,7 +286,7 @@
                         </aside>
                     </section>
                     <section>
-                        <img src="img/ang-pres/dataBinding1.png" />
+                        <img src="ang-pres/ang-pres/dataBinding1.png" />
 
                         <aside class="notes">
                             <ul>
@@ -183,14 +300,14 @@
                     </section>
                     <section>
 
-                        <img src="img/ang-pres/dataBinding2.png" />
+                        <img src="ang-pres/ang-pres/dataBinding2.png" />
                         <aside class="notes">
                             Let's say I have an array of 3 superheroes and I bind it to a template using a repeating construct built into Angular. What I'm telling the templating engine to do is to iterate through all the elements of the array, tie each element to the template. What you get out of this is this generated view of 3 super herores. And its not a one time thing. Lets say you push a new object into this array or you remove an object from the array or simply modify the contents of the array, the changes will be automatically reflected in the view. You don't have to do anything to manage the view once the two-way data binding is enabled.
                         </aside>
                     </section>
                     <section>
 
-                        <img src="img/ang-pres/dataBinding3.png" />
+                        <img src="ang-pres/ang-pres/dataBinding3.png" />
                         <aside class="notes">
                             With data binding you can remove a lot of javascript code from your application. Because when you look at a typical application, about 70 to 80% of all the js is synchronizing the model with the view and updating the model with the changes in the view. All of this code can go away. So Angular teaches browser how to do data binding using existing api's. Google is actually creating a specification to propose this two way data binding feature to be built into next generation web browsers.
                         </aside>
@@ -198,21 +315,21 @@
                     <section>
                         <h4>Directives</h4>
 
-                        <img src="img/ang-pres/reuse.png" />
+                        <img src="ang-pres/ang-pres/reuse.png" />
                         <aside class="notes">
                             HTML can be very verbose sometimes. Let's take a simple example. Let's say that I would like to create a neat tab system in my application with Bootstrap CSS. In order to generate a simple component like this, I need to copy paste this chunk of html to get this view. This is not ideal. HTML has a limited set of vocabulary and often comes short when we want to build some basic components like Accordions or tabs natively. Also this is not maintainable. You have to copy/paste it again, change the div ids etc. If the template changes you need to go to all the places where it is used and change it.
                         </aside>
                     </section>
                     <section>
                         <h3>Directives</h3>
-                        <img src="img/ang-pres/reuse1.png" />
+                        <img src="ang-pres/ang-pres/reuse1.png" />
                         <aside class="notes">
                             So what I want in my html template is to specify a custom tag say "tab" and just tell the browser to render tabs. I want this page to have two tabs and each tab will have a title. You figure out what the underlying DOM structure needs to be generated. This is something that is supported by angular. This concept of reusable code is called Directives. 
                         </aside>
                     </section>
                     <section>
 
-                        <img src="img/ang-pres/reuse2.png" />
+                        <img src="ang-pres/ang-pres/reuse2.png" />
 
                         <aside class="notes">
                             And its not just tabs. Think about all these components that you could build using this feature. You can also share it within/outside of your project. These components can be stateless or stateful. 
@@ -221,7 +338,7 @@
 
                     <section>
 
-                        <img src="img/ang-pres/reuse3.png" />
+                        <img src="ang-pres/ang-pres/reuse3.png" />
                         <aside class="notes">
                             So reusable components feature in Angular is built with existing JS & DOM APIs. It's available in all the browsers. And it is also being proposed to become native for all modern browsers. It's already been implemented in Chrome Dev versions.
                         </aside>
