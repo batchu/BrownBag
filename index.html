@@ -335,12 +335,7 @@ So how did we approach this problem?
                                 </ul>
                                 </section>
                                 <section>
-                                    <h4>How did the developer community react to facilitate this paradigm shift?</h4>
-                                    
-                                    
-                                    
-                                    
-                                    
+                                    <h4>Developer community's reaction<!-- to facilitate this paradigm shift--></h4>
                                     
                                     <div class="span6">
 					
@@ -455,7 +450,7 @@ So how did we approach this problem?
 						<li><b>*</b> <span class="label">R</span> = App also demonstrates routing</li>
 						<li><b>*</b> <span class="labs-example">Maroon</span> = App requires further work to comply with <a href="https://github.com/tastejs/todomvc/wiki/App-Specification">the spec</a></li>
 					</ul>
-					<hr>
+					
 					
 				</div>
                                
@@ -557,41 +552,18 @@ So how did we approach this problem?
 					</ul>
                                     </div>
                                 </section>
+                                <section>
+                                    <img src='img/AngularJS-Shield-medium.png' /><br />
+                                    Angular JS represents one of these numerous frameworks that has sprung up to represent this paradigm shift
+                                </section>
                             </section>
-                            
-                            <section>
-                        <h4>HTML & JavaScript Origins</h4>
-                        <ul>
                           
-                            <li>But we want Desktop style apps. We get then by either
-
-                                <ul>
-                                    <li>Abstracting away HTML, CSS, and/or JavaScript (GWT, Vaadin etc)</li>
-                                    <li>Manipulating the DOM (JQuery)</li>
-                                </ul>
-                            </li>
-                            <li>Neither of these address the root problem that HTML was not designed for dynamic views.</li>
-
-                        </ul>
-
-                        <aside class="notes">
-                            <ul> <li>The web has enabled businesses to connect to its users with just a browser. And as we all know browsers can only understand HTML, CSS and Javascript.
-                                </li>
-                              
-                                <li>  
-                                    So we use certain frameworks to deal with HTML’s shortcomings by either abstracting away from HTML, CSS, and/or JavaScript ( using GWT, Vaadin etc) or by manipulating the DOM (JQuery is a prime example for that).</li>
-                                <li>Neither of these address the root problem that HTML is not designed for dynamic views. This is a problem angular tries to solve</li>
-                            </ul>
-
-                        </aside>
-                    </section>
-                            
-                    <section><h3>Quick review of Angular</h3>
+             <section><h3>What is Angular Anyway?</h3>
 
                     <blockquote>
                         &ldquo;AngularJS is a structural meta framework for developing modern dynamic web applications&rdquo;
                     </blockquote>
-                    <img src='img/ang-pres/ang-pres/spa.png' />
+                    <img src='img/spa.png' />
                     <!--                                <ul>
                                                         <li>Data Binding. No more DOM manipulation</li>
                                                         <li>Reusability of code through Directives</li>
@@ -603,10 +575,11 @@ So how did we approach this problem?
                             <li>AngularJS is a structural meta framework for developing modern dynamic web apps</li>
                             <li>Angular is what HTML would have been had it been designed for  web applications.</li>
 
-                            <li>It provides a  solution for development. 
+                            <li>It provides an End to End solution for development. 
                                 <ul>
+                                    <li>It is a Meta Framework</li>
                                     <ul>
-                                        <li>It is a Meta Frameworkin the sense that it gives a lot of room for developers to expand on its existing functionality.</li>
+                                        <li>What I mean by "meta" is that it gives a lot of room for developers to expand on its existing functionality. We'll talk about it a bit later</li>
                                     </ul>
                                     <li>It Works well with other js libraries nicely including JQuery (If we need to)</li>
 
@@ -618,7 +591,37 @@ So how did we approach this problem?
                         </ul>         
                     </aside>
                 </section>
-                          <section>
+                                                <section>
+                                                    <h4>Key Features</h4>
+                                                   
+                                                    <p>Few of Angular's characteristics</p> 
+                                                    <ul>
+                                                        <li>Data Binding. No more DOM manipulation</li>
+                                                        <li>Reusability of code through Directives</li>
+                                                        <li>Provides End to End solution
+                                                         <ul>
+                                                                <li>Meta Framework</li>
+                                                                <li>Works well with other js libraries nicely</li>
+                                                                <li>Testing, Debugging, Deployment</li>
+                                                            </ul></li>
+                                                        <li>Declarative and not imperative
+                                                            <ul>
+                                                            <li>Declarative programming model best for working with UI</li>
+                                                            <li>Imperative model best for expressing business logic</li>
+                                                        </ul></li>
+                                                        <li>Supports Dependency Injection</li>
+                                                        <li>Supports MV* Architecture</li>
+                                                        <li>Embraces Testing</li>
+                                                        <li>Ecosystem for a modern workflow
+                                                        </li>
+                                                    </ul>
+                <aside class="notes">
+                    We'll talk about these features in the next slide
+                </aside>
+                                                </section>
+                </section>
+
+                <section>
                     <section>
                         <h3> Angular's core features</h3>
                         <ul>
@@ -631,8 +634,8 @@ So how did we approach this problem?
                     </section>
                     <section>
                         <h4>Angular supports Two way Data Binding</h4>
-                        <img src='img/ang-pres/ang-pres/One_Way_Data_Binding.png' />
-                        <img src='img/ang-pres/ang-pres/2wayDataBinding.png' />
+                        <img src='img/ang-pres/One_Way_Data_Binding.png' />
+                        <img src='img/ang-pres/2wayDataBinding.png' />
                         <ul>
                             <li>Data-binding: Automatic synchronization of data between the model and view components. </li>
                             <li>Treat the model as the single-source-of-truth in your application. </li>
@@ -644,7 +647,7 @@ So how did we approach this problem?
                         </aside>
                     </section>
                     <section>
-                        <img src="ang-pres/ang-pres/dataBinding1.png" />
+                        <img src="img/ang-pres/dataBinding1.png" />
 
                         <aside class="notes">
                             <ul>
@@ -658,14 +661,14 @@ So how did we approach this problem?
                     </section>
                     <section>
 
-                        <img src="ang-pres/ang-pres/dataBinding2.png" />
+                        <img src="img/ang-pres/dataBinding2.png" />
                         <aside class="notes">
                             Let's say I have an array of 3 superheroes and I bind it to a template using a repeating construct built into Angular. What I'm telling the templating engine to do is to iterate through all the elements of the array, tie each element to the template. What you get out of this is this generated view of 3 super herores. And its not a one time thing. Lets say you push a new object into this array or you remove an object from the array or simply modify the contents of the array, the changes will be automatically reflected in the view. You don't have to do anything to manage the view once the two-way data binding is enabled.
                         </aside>
                     </section>
                     <section>
 
-                        <img src="ang-pres/ang-pres/dataBinding3.png" />
+                        <img src="img/ang-pres/dataBinding3.png" />
                         <aside class="notes">
                             With data binding you can remove a lot of javascript code from your application. Because when you look at a typical application, about 70 to 80% of all the js is synchronizing the model with the view and updating the model with the changes in the view. All of this code can go away. So Angular teaches browser how to do data binding using existing api's. Google is actually creating a specification to propose this two way data binding feature to be built into next generation web browsers.
                         </aside>
@@ -673,21 +676,21 @@ So how did we approach this problem?
                     <section>
                         <h4>Directives</h4>
 
-                        <img src="ang-pres/ang-pres/reuse.png" />
+                        <img src="img/ang-pres/reuse.png" />
                         <aside class="notes">
                             HTML can be very verbose sometimes. Let's take a simple example. Let's say that I would like to create a neat tab system in my application with Bootstrap CSS. In order to generate a simple component like this, I need to copy paste this chunk of html to get this view. This is not ideal. HTML has a limited set of vocabulary and often comes short when we want to build some basic components like Accordions or tabs natively. Also this is not maintainable. You have to copy/paste it again, change the div ids etc. If the template changes you need to go to all the places where it is used and change it.
                         </aside>
                     </section>
                     <section>
                         <h3>Directives</h3>
-                        <img src="ang-pres/ang-pres/reuse1.png" />
+                        <img src="img/ang-pres/reuse1.png" />
                         <aside class="notes">
                             So what I want in my html template is to specify a custom tag say "tab" and just tell the browser to render tabs. I want this page to have two tabs and each tab will have a title. You figure out what the underlying DOM structure needs to be generated. This is something that is supported by angular. This concept of reusable code is called Directives. 
                         </aside>
                     </section>
                     <section>
 
-                        <img src="ang-pres/ang-pres/reuse2.png" />
+                        <img src="img/ang-pres/reuse2.png" />
 
                         <aside class="notes">
                             And its not just tabs. Think about all these components that you could build using this feature. You can also share it within/outside of your project. These components can be stateless or stateful. 
@@ -696,13 +699,194 @@ So how did we approach this problem?
 
                     <section>
 
-                        <img src="ang-pres/ang-pres/reuse3.png" />
+                        <img src="img/ang-pres/reuse3.png" />
                         <aside class="notes">
                             So reusable components feature in Angular is built with existing JS & DOM APIs. It's available in all the browsers. And it is also being proposed to become native for all modern browsers. It's already been implemented in Chrome Dev versions.
                         </aside>
                     </section>
 
+                </section>               
+                <section>
+
+                    <section>
+                        <h3>Examples</h3>   
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/d7Y76/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+                        <img src="img/concepts-startup.png" />
+                        <img src="img/concepts-runtime.png" />
+                        <aside class="notes">
+                            <ul>
+                                <li>The browser loads the HTML and parses it into a DOM</li>
+                                <li>The browser loads <code>angular.js</code> script</li>
+                                <li>Angular waits for <code>DOMContentLoaded</code> event</li>
+                                <li>Angular looks for <a href="api/ng.directive:ngApp"><code>ng-app</code></a>
+                                    <a href="guide/directive">directive</a>, which designates the application boundary</li>
+                                <li>The <a href="guide/module">Module</a> specified in <a href="api/ng.directive:ngApp"><code>ng-app</code></a> (if any) is used to configure
+                                    the <a href="api/AUTO.$injector"><code>$injector</code></a></li>
+                                <li>The <a href="api/AUTO.$injector"><code>$injector</code></a> is used to create the <a href="api/ng.$compile"><code>$compile</code></a> service as well as <a href="api/ng.$rootScope"><code>$rootScope</code></a></li>
+                                <li>The <a href="api/ng.$compile"><code>$compile</code></a> service is used to compile the DOM and link
+                                    it   with <a href="api/ng.$rootScope"><code>$rootScope</code></a></li>
+                                <li>The <a href="api/ng.directive:ngInit"><code>ng-init</code></a> <a href="guide/directive">directive</a> assigns <code>World</code> to the <code>name</code> property on the <a href="guide/scope">scope</a></li>
+                                <li>The <code>{{name}}</code> <a href="api/ng.$interpolate"><code>interpolates</code></a> the expression to
+                                    <code>Hello World!</code></li>
+                        </aside>
+                    </section>
+                    <section>
+                        <h4>Type in your Name</h4>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/QSFh7/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <aside class="notes">
+                            <ol>
+                                <li>During the compilation phase:
+                                    <ol><li>the <a href="api/ng.directive:ngModel"><code>ng-model</code></a> and <a href="api/ng.directive:input"><code>input</code></a> <a href="guide/directive">directive</a> set up a <code>keydown</code> listener on the <code>&lt;input&gt;</code> control.</li>
+                                        <li>the <a href="api/ng.$interpolate"><code>{{name}}</code></a> interpolation
+                                            sets up a <a href="api/ng.$rootScope.Scope#$watch"><code>$watch</code></a> to be notified of
+                                            <code>name</code> changes.</li></ol></li>
+                                <li>During the runtime phase:
+                                    <ol><li>Pressing an '<code>X</code>' key causes the browser to emit a <code>keydown</code> event on the input control.</li>
+                                        <li>The <a href="api/ng.directive:input"><code>input</code></a> directive
+                                            captures the change to the input's value and calls <a href="api/ng.$rootScope.Scope#$apply"><code>$apply</code></a><code>("name = 'X';")</code> to update the
+                                            application model inside the Angular execution context.</li>
+                                        <li>Angular applies the <code>name = 'X';</code> to the model.</li>
+                                        <li>The <a href="api/ng.$rootScope.Scope#$digest"><code>$digest</code></a> loop begins</li>
+                                        <li>The <a href="api/ng.$rootScope.Scope#$watch"><code>$watch</code></a> list detects a change
+                                            on the <code>name</code> property and notifies the <a href="api/ng.$interpolate"><code>{{name}}</code></a> interpolation, which in turn updates the DOM.</li>
+                                        <li>Angular exits the execution context, which in turn exits the <code>keydown</code> event and with it
+                                            the JavaScript execution context.</li>
+                                        <li>The browser re-renders the view with update text.</li></ol></li>
+                            </ol>
+                            Let's understand another angular concept called $scope. After that we'll build a nice little TODO app.
+                        </aside>
+                    </section>
+                    
+                <section>
+                        <img src="img/scope.png" />
+
+
+                    </section>
+                    <section>
+                        TODO App
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/SyaFT/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                   
+                    <section>
+                        <a href='http://docs.angularjs.org/guide/directive'>  Directives</a>
+                       <iframe width="100%" height="700" src="http://jsfiddle.net/uhsarp/K7u9V/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    <section>
+                        <a href='http://docs.angularjs.org/guide/directive'>  Directives</a>
+                        <iframe width="100%" height="700" src="http://jsfiddle.net/uhsarp/qZjrW/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    
+                    <section>
+                        <h3><a href='http://docs.angularjs.org/guide/di' >Dependency Injection</a></h3>
+<h4 id="diincontrollers">DI in controllers</h4>
+
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+    var MyController = function($scope, dep1, dep2) {
+    ...
+    $scope.aMethod = function() {
+    ...
+    }
+    }
+    MyController.$inject = ['$scope', 'dep1', 'dep2'];
+
+</code></pre>
+<h4 id="diincontrollers">Factory Methods</h4>
+
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+        angular.module('myModule', []).
+    config(['depProvider', function(depProvider){
+    ...
+    }]).
+    factory('serviceId', ['depService', function(depService) {
+    ...
+    }]).
+    directive('directiveName', ['depService', function(depService) {
+    ...
+    }]).
+    filter('filterName', ['depService', function(depService) {
+    ...
+    }]).
+    run(['depService', function(depService) {
+    ...
+    }]);
+
+</code></pre>
+                    </section>
+                    
+                    
+                    <section>
+                        <h3>Angular JS Module Example DEMO</h3>
+                        <aside class="notes">
+                            Show Billrive-client demo
+                        </aside>
+                    </section>
+                    
+                    <section>
+                        Wiring a Backend
+                        <iframe width="100%" height="800" src="http://jsfiddle.net/uhsarp/upv84/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                    </section>
+                    
+                    <section>
+                        <h3><a href='http://docs.angularjs.org/guide/dev_guide.unit-testing'>Testing</a></h3>
+                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+    ...
+    it('should render phone specific links', function() {
+    input('query').enter('nexus');
+    element('.phones li a').click();
+    expect(browser().location().url()).toBe('/phones/nexus-s');
+    });
+    ...
+
+</code></pre>
+                    </section>
                 </section>
+                <section>
+                    <h3>Debugging</h3>
+                    <ul>
+                        <li><a href='https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en' >Angular Batarang</a></li>
+                        <li><a href='https://chrome.google.com/webstore/detail/netbeans-connector/hafdlehgocfcodbgjnpecfajgkeejnaa?hl=en' >Netbeans Chrome Integration</a></li>
+                        
+                    </ul>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+                   
+                        <h4>Best Practices</h4>
+                    
+                   
+                        <img src='img/toolset.png'/>
+                        <ul>
+                            <li><p><a href="https://github.com/yeoman/yo">Yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build. </p></li>
+                            <li><p><a href="http://gruntjs.com">Grunt</a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. </p></li>
+                            <li><p><a href="http://bower.io">Bower</a> is used for dependency management, so that you no longer have to manually download and manage your scripts.</p></li>
+                            
+                        </ul>
+
+                </section>
+                <section>
+                    <h2>Resources</h2>
+                    
+                        <ul>
+                            <li><a href='http://angularjs.org/'>Angular JS Website</a></li>
+                            <ul>
+                                <li><a href='http://docs.angularjs.org/api/'>API Reference</a></li>
+                                <li><a href='http://docs.angularjs.org/guide/'>Developer Guide</a></li>
+                                <li><a href='http://docs.angularjs.org/guide/dev_guide.unit-testing'>Unit Testing</a></li>
+                                <li><a href='https://github.com/angular/angular-seed'>Angular Seed Project</a></li>
+                            </ul>
+                            <li><a href='http://builtwith.angularjs.org'>Built With Angular</a></li>
+                            <li><a href='http://angular-ui.github.io'>Angular UI</a></li>    
+                            <li><a href='http://mgcrea.github.io/angular-strap'>Angular Strap</a></li>
+                            <li><a href='http://www.youtube.com/user/angularjs'>Angular JS Channel on Youtube</a></li>
+                            <li><a href='http://www.youtube.com/watch?v=ZhfUv0spHCY'>Angular JS Best Practices</a></li>
+                            <li><a href='http://www.youtube.com/watch?v=iUQ1fvdO9GY'>Yeoman Tutorial</a></li>
+                            <li><a href='https://groups.google.com/forum/?fromgroups#!forum/angular'>Angular Mailing List</a></li>
+
+                        </ul>
+                    
+                </section>    
               <section>
 
                     <h4>Walkthrough a Web App with Angular</h4>
