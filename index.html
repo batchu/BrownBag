@@ -212,11 +212,20 @@ common with Lisp, Self and Scheme than with Java. It is Lisp in C’s clothing</
                                            The content on this slide is  familiar to most of of us. Introduction of JSON & AJAX have revolutionized the way we use JavaScript. Standardization of JavaScript has been problematic thanks to its proliferation over the years  with various dialects and versions of ECMAScript, JavaScript and jScript floating around as all browsers differed in what they supported. 
                                     </aside>
                                 </section>
-                                <section>
-
+                               <section>
+                                    <h3>Traditional uses of JavaScript</h3>
+                                    <ul>
+                                        <li>Realtime DOM manipulation</li>
+                                        <li>AJAX</li>
+                                        <li>Handling Browser Events</li>
+                                        <li>Limited Animation</li>
+                                    </ul>
+                                    <aside class="notes">
+                                        The way we traditionally used JavaScript over the years has been to enhance the user experience by catching user generated browser events like clicking a button and subsequently updating or modifying the DOM after either making an AJAX call or just by changing the way the UI looks without reloading the page. Simple usecases include everything from prevalidation of form data before sending it to the server to server for final validation & processing to catching a button click event then perform an AJAX call and display the server returned data to the user without a page refresh. Pretty much anything dynamic in the browser has to happen with the support of JavaScript. But because of proliferation
+                                    </aside>
                                 </section>
                             </section>
-                            <section>
+                            <section><section>
                                 <h3>Rise of the Web</h3>
                                 <ul>
                                                                       <li>The Web Browser becomes Ubiquitous with HTML, CSS & JS as the De Facto technologies resisting any alternatives</li>                                                                  <li>Thin clients win over Thick clients</li>
@@ -231,26 +240,44 @@ common with Lisp, Self and Scheme than with Java. It is Lisp in C’s clothing</
 JavaScript replacement technologies fail to achieve mainstream acceptance
                                 </aside>
                             </section>
-                            <section>
-                                    <h3>Traditional use of JavaScript</h3>
-                                    <ul>
-                                        <li>Realtime DOM manipulation</li>
-                                        <li>AJAX</li>
-                                        <li>Handling Browser Events</li>
-                                        <li>Limited Animation</li>
-                                    </ul>
-                                    <aside class="notes">
-                                        The way we traditionally used JavaScript over the years has been to enhance the user experience by catching user generated browser events like clicking a button and subsequently updating or modifying the DOM after either making an AJAX call or just by changing the way the UI looks without reloading the page. Simple usecases include everything from prevalidation of form data before sending it to the server to server for final validation & processing to catching a button click event then perform an AJAX call and display the server returned data to the user without a page refresh. Pretty much anything dynamic in the browser has to happen with the support of JavaScript. But because of proliferation
-                                    </aside>
-                                </section>
-                            <section>
+                                <section>
                                 <h3>Browser Vs JavaScript</h3>
                                 <ul>
                                      <li>Browser proliferation with varied support for JS dialects create unique set of challenges for developing Web Apps</li>
-                                    <li>jQuery, DOJO, Mootools evolve by creating an abstraction to solve some of these problems</li>
+                                  
                                     <li>Increase in scope and complexity of web apps over time with the introduction of AJAX, severe limitations of HTML and a stale and stuck version upgrade process to support the development of highly interactive, Proliferation of JavaScript dialects among browsers, lack of adoption of suitable alternatives to JS have all led to rethink how we perceive JavaScript</li>
                                 </ul>
+                                <aside class='notes'>
+So how did we approach this problem?
+                                </aside>
                             </section>
+                                <section>
+                                    <h3>A Solution or Kick the can down the road?</h3>
+                                    
+                                    <ul>
+                                        <li>Abstract away from JavaScript: jQuery, DOJO, Mootools etc.</li>
+                                        <li>Avoid the problem in its entirety: GWT, Vaadin, Opal, Dart, IronPython, IronRuby, HotRuby etc.</li>
+                                    </ul>
+                                    
+                                </section>
+                                <section>
+                                    <h3> What's wrong with Abstraction?</h3>
+                                    <ul>
+                                        <li>In an ideal world where browsers play nice, jQuery shouldn't have an existence. But it does exist to make Front End development less hellish for developers.</li>
+                                    </ul>
+                                    <ul>
+                                        <li>Abstraction limits
+                                            <ul>
+                                                <li>Reusability: As we end up tying the DOM (manipulation, attachment) to Business logic</li>
+                                                <li>Testability: Limits our ability to test when business logic is tied to DOM element structure (IDs, Classes etc.)</li>
+                                                <li>Maintainability: No proper native development paradigm coupled with increasing business need for highly interactive and complex workflows and lack of adaption of proper design patterns increases the lines of source code without proper organization making it extremely difficult to maintain over time.</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+
+                                </section>
+                            </section>
+                            
                             <section>
                         <h4>HTML & JavaScript Origins</h4>
                         <ul>
