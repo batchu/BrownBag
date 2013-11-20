@@ -343,10 +343,11 @@
                         </ul>
                         <aside class="notes">
                             The evolution of backend technologies provides some good insights to approach the problems plaguing the front end development environment. There is a lot that can be borrowed from the backend to the frontend like design patterns including MVC, Dependency Injection, build tools etc. while letting HTML evolve at a much faster pace than it is current rate of change.
-                            Also Declarative style of programming  rather than imperative style suits front end HTML development better. Imperative is ideal for the backend but not so much for the frontend. Also we talked about the increasing scope and complexity of front end apps. So why not borrow MVC pattern from the backend and apply it to the frontend to solve some of the maintainability and reusability issues? And for the same reasons why not find ways to support testing front end code from the ground up? Would employing the concepts of dependency injection help? Absolutely! Another failed attempt has been to shun or evade HTML and that did not end up well. HTML needs to keep evolving at a much faster pace to keep up. Also DOM manipulation using Event based programming should be limited to promote reusability and testability. So what is the developer community's response to address these issues in the past past few years?
+                          Also we talked about the increasing scope and complexity of front end apps. So why not borrow MVC pattern from the backend and apply it to the frontend to solve some of the maintainability and reusability issues? And for the same reasons why not find ways to support testing front end code from the ground up? Would employing the concepts of dependency injection help? Absolutely! Another failed attempt has been to shun or evade HTML and that did not end up well. HTML needs to keep evolving at a much faster pace to keep up. Also DOM manipulation using Event based programming should be limited to promote reusability and testability. So what has been the developer community's response in the past past few years to address some of these issues ?
                            
                         </aside>
                     </section>
+                    
                     <section>
                         <h4>Developer community's reaction<!-- to facilitate this paradigm shift--></h4>
 
@@ -466,7 +467,9 @@
 
 
                         </div>
-
+                        <aside class="notes">
+                            So the reaction is emergence of a plethora of frameworks adapting varied design principles and philosophies but the goal for almost all of these projects is to change the way we use and perceive javascript. Strategies to replace javascript haven't worked. So if you can't beat 'em, join 'em. By the way the same principle applies for Index funds for those who are financial geeks in the audience. Anyway, we got more listings in the next slide.
+                        </aside>
                     </section>
                     <section>
                         <h4>Compile To JavaScript</h4>
@@ -564,12 +567,16 @@
                                 -->
                             </ul>
                         </div>
+                        <aside class="notes">
+                            And thus Javascript is here to stay and is not going away anytime soon. If Javascript issues stock,I'd be all over it. It would be hotter than Apple's. Anyway it is almost impossible to talk about each and every one of these frameworks. By the time we are done with the first two in the list, three more new projects will have already sprung up. So let's pick one to study.
+                            <!--and see how it approaches to solve some of the problems we earlier discussed.-->
+                        </aside>
                     </section>
                     <section>
                         <img src='img/AngularJS-Shield-medium.png' /><br />
-                        Angular JS represents one such framework which represents this new paradigm. 
+                        Angular JS represents one such framework which attempts to address some of the issues plaguing front end development. 
                         <aside class='notes'>
-Angular JS represents one such framework which embraces this new paradigm. Actually all the frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but they all do bring a lot of value to the table. But I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps. It has gathered a lot of attention and support from Developers in the recent years. Studying it will provide insights into some of the ways these frameworks attempt to solve some of the problems with abstraction. So what is Angular JS anyway?
+Angular JS represents one such framework which embraces this new paradigm shift. Actually all the frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but they all do bring a lot of value to the table. I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps. It has gathered a lot of attention and support from Developers in the recent years. Studying it will provide insights into some of the ways these frameworks attempt to solve some of the problems with abstraction. So what is Angular JS anyway?
                         </aside>
                     </section>
                 </section>
@@ -595,7 +602,7 @@ Angular JS represents one such framework which embraces this new paradigm. Actua
                                 <ul>
                                     <li>It is a Meta Framework</li>
                                     <ul>
-                                        <li>What I mean by "meta" is that it gives a lot of room for developers to expand on its existing functionality. We'll talk about it a bit later</li>
+                                        <li>What I mean by "meta" is that it gives a lot of wiggle room for developers to expand on its existing functionality. We'll talk about it a bit later</li>
                                     </ul>
                                     <li>It Works well with other js libraries nicely including JQuery (If we need to). Let's talk about how it solves some of the issues that we previously talked about.</li>
 
@@ -632,10 +639,47 @@ Angular JS represents one such framework which embraces this new paradigm. Actua
                 
                     </ul>
                     <aside class="notes">
-                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's take a closer look.
+                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's take about Declarative style of programming a bit.
                     </aside>
                 </section>
-               
+               <section>
+                        <h4>Declarative vs Imperative for the Front End</h4>
+                        <img src='img/declarative.png' />
+<pre><code data-trim contenteditable>
+<div class="container" ng-controller="TextAreaWithLimitCtrl">
+<div class="row">
+<textarea ng-model="message">{{message}}</textarea>
+</div>
+<div class="row">
+<button ng-click="send()">Send</button>
+<button ng-click="clear()">Clear</button>
+</div>
+</div> 
+</code></pre>                        
+<pre><code data-trim contenteditable>
+//Number of remaining characters - HTML
+<span>Remaining: {{remaining()}}</span>
+//Corresponding JS code
+$scope.remaining= function () {
+return MAX_LEN - $scope.message.length;
+};
+</code></pre>                        
+<pre><code data-trim contenteditable>
+<!-- Disabling the button if the length is invalid -->
+<button ng-disabled="!hasValidLength()"...>Send</button>
+</code></pre>                        
+                        
+                        <aside class="notes">
+                            Declarative style of programming suits front end HTML development better. Imperative style is ideal for the backend but not so much for the frontend. let's understand it better with a simple example.
+                             Here we have a small message box. The simple requirements here are
+                             The Send button's disabled state must be properly managed
+ The Remaining charecter length should be updated as the user continues to type.
+ The code snippets show the declarative approach.
+ 
+  Angular promotes declarative style of programming for the front end. 
+                            
+                        </aside>
+                    </section>
                 <section >
                 <section >
 <!--                    <h3>Angular JS</h3>-->
@@ -655,7 +699,7 @@ shinyApp.service('shinyService', function($resource, $q) {
     <li>A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding.</li>
 </ul></div>
  <aside class='notes'>
-Before we see checkout what's under the hood, lets take a high level view of how an Angular based App would be structured and see how its components interact with each other. 
+Before we see checkout what's under the hood, lets take a high level view of how an Angular based App would be structured like and see how its components interact with each other. 
 Here we have an Angular Client consuming a REST API. An Angular client can have one or more modules. A module acts as a container for other AngularJS managed objects 
 (controllers, services, and so on) and manages their lifecycle. Here we have a view (an html partial), a controller and a service. A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding. The Route maps each URL to a View (html partial) and a Controller.
 
