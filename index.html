@@ -555,7 +555,10 @@
                     </section>
                     <section>
                         <img src='img/AngularJS-Shield-medium.png' /><br />
-                        Angular JS represents one such framework which embraces this new paradigm. Actually all the  frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but do bring a lot of value to the table. But I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps. It has gathered a lot of attention and support from Developers in the recent years. So what is Angular JS anyway?
+                        Angular JS represents one such framework which represents this new paradigm. 
+                        <aside class='notes'>
+Angular JS represents one such framework which embraces this new paradigm. Actually all the frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but they all do bring a lot of value to the table. But I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps. It has gathered a lot of attention and support from Developers in the recent years. Studying it will provide insights into some of the ways these frameworks attempt to solve some of the problems with abstraction. So what is Angular JS anyway?
+                        </aside>
                     </section>
                 </section>
 
@@ -678,7 +681,7 @@ When a URL is invoked, a new instance of its associated Controller is created. T
                 </section>
 
                 <section>
-                    <section>
+<!--                    <section>
                         <h3> Angular's core features</h3>
                         <ul>
                             <li>Directives and Filters</li>
@@ -687,7 +690,7 @@ When a URL is invoked, a new instance of its associated Controller is created. T
                             <li>Modules and Routes</li>
                             <li>Testing</li>
                         </ul>
-                    </section>
+                    </section>-->
                     <section>
                         <h4>Angular supports Two way Data Binding</h4>
                         <img src='img/ang-pres/One_Way_Data_Binding.png' />
@@ -761,15 +764,21 @@ When a URL is invoked, a new instance of its associated Controller is created. T
                         </aside>
                     </section>
 
-                </section>               
+                </section>  
+                <section>
+                    <p>References will be made available along with these slides</p>
+                </section>
+                <section>
+                    <h3>Questions?</h3>
+                    <img src='img/Stephen-Harper-joke-5-questions.jpeg' />
+                </section>
                 <section>
 
                     <section>
-                        <h3>Examples</h3>   
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/d7Y76/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-
-                        <img src="img/concepts-startup.png" />
-                        <img src="img/concepts-runtime.png" />
+                        <h3>Under the Hood</h3>   
+                
+                        <img src="img/ang-pres/concepts-startup.png" />
+                        <img src="img/ang-pres/concepts-runtime.png" />
                         <aside class="notes">
                             <ul>
                                 <li>The browser loads the HTML and parses it into a DOM</li>
@@ -813,9 +822,9 @@ When a URL is invoked, a new instance of its associated Controller is created. T
                             Let's understand another angular concept called $scope. After that we'll build a nice little TODO app.
                         </aside>
                     </section>
-
-                    <section>
-                        <img src="img/scope.png" />
+                    
+                <section>
+                        <img src="img/ang-pres/scope.png" />
 
 
                     </section>
@@ -823,21 +832,21 @@ When a URL is invoked, a new instance of its associated Controller is created. T
                         TODO App
                         <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/SyaFT/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
-
+                   
                     <section>
                         <a href='http://docs.angularjs.org/guide/directive'>  Directives</a>
-                        <iframe width="100%" height="700" src="http://jsfiddle.net/uhsarp/K7u9V/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                       <iframe width="100%" height="700" src="http://jsfiddle.net/uhsarp/K7u9V/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
                     <section>
                         <a href='http://docs.angularjs.org/guide/directive'>  Directives</a>
                         <iframe width="100%" height="700" src="http://jsfiddle.net/uhsarp/qZjrW/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
-
+                    
                     <section>
                         <h3><a href='http://docs.angularjs.org/guide/di' >Dependency Injection</a></h3>
-                        <h4 id="diincontrollers">DI in controllers</h4>
+<h4 id="diincontrollers">DI in controllers</h4>
 
-                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
     var MyController = function($scope, dep1, dep2) {
     ...
     $scope.aMethod = function() {
@@ -847,9 +856,9 @@ When a URL is invoked, a new instance of its associated Controller is created. T
     MyController.$inject = ['$scope', 'dep1', 'dep2'];
 
 </code></pre>
-                        <h4 id="diincontrollers">Factory Methods</h4>
+<h4 id="diincontrollers">Factory Methods</h4>
 
-                        <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
+<pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
         angular.module('myModule', []).
     config(['depProvider', function(depProvider){
     ...
@@ -869,20 +878,20 @@ When a URL is invoked, a new instance of its associated Controller is created. T
 
 </code></pre>
                     </section>
-
-
+                    
+                    
                     <section>
                         <h3>Angular JS Module Example DEMO</h3>
                         <aside class="notes">
                             Show Billrive-client demo
                         </aside>
                     </section>
-
+                    
                     <section>
                         Wiring a Backend
                         <iframe width="100%" height="800" src="http://jsfiddle.net/uhsarp/upv84/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
                     </section>
-
+                    
                     <section>
                         <h3><a href='http://docs.angularjs.org/guide/dev_guide.unit-testing'>Testing</a></h3>
                         <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
