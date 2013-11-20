@@ -582,7 +582,7 @@
                                     <ul>
                                         <li>What I mean by "meta" is that it gives a lot of room for developers to expand on its existing functionality. We'll talk about it a bit later</li>
                                     </ul>
-                                    <li>It Works well with other js libraries nicely including JQuery (If we need to)</li>
+                                    <li>It Works well with other js libraries nicely including JQuery (If we need to). Let's talk about how it solves some of the issues that we previously talked about.</li>
 
                                     <li></li>
                                 </ul>
@@ -601,8 +601,8 @@
                         </li>
                         <li>Maintainability:
                             <ul>
-                                <li>Modular Architecture</li>
-                                <li>Supports MV* pattern</li>
+                                <li>Modular Architecture (Module)</li>
+                                <li>Supports MV* pattern: Controllers, Views (ViewModel - $scope, Services, Factories</li>
                                 <li>Two Way Data Binding</li>
                                 <li>Declarative style</li>
                                 <li>Dependency Injection</li>
@@ -611,12 +611,13 @@
                             <ul>
                                 <li>Everything is Dependency Injected.</li>
                                 <li>Mocks provided for the framework by default</li>
-                                <li>Testing support from the ground up using Karma/li>
+                                <li>Testing support from the ground up using <b>Karma</b>/li>
                             </ul></li>
+                            <li>Browser Support: Tested extensively against Safari, Chrome, Firefox, Opera, IE8, IE9 and mobile browsers (Android, Chrome Mobile, iOS Safari)</li>
                 
                     </ul>
                     <aside class="notes">
-                        We'll talk about these features in the next slide
+                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's checkout what's under the hood.
                     </aside>
                 </section>
                 </section>
