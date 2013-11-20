@@ -555,7 +555,7 @@
                     </section>
                     <section>
                         <img src='img/AngularJS-Shield-medium.png' /><br />
-                        Angular JS represents one such framework which embraces this new paradigm. Actually all the  frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but do bring a lot of value to the table. But I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps.
+                        Angular JS represents one such framework which embraces this new paradigm. Actually all the  frameworks listed in the previous slides embody similar goals but with different philosophies. So it is perfectly fine if one wants to try out Ember or Backbone or any other project. Each of these technologies have their own strengths and weaknesses but do bring a lot of value to the table. But I personally believe that Angular promotes an organic solution to the existing problem by borrowing time tested design principles and practices from the backend and creating an End to End solution for developing Front end web apps. It has gathered a lot of attention and support from Developers in the recent years. So what is Angular JS anyway?
                     </section>
                 </section>
 
@@ -576,7 +576,7 @@
                             <li>AngularJS is a structural meta framework for developing modern dynamic web apps</li>
                             <li>Angular is what HTML would have been had it been designed for  web applications.</li>
 
-                            <li>It provides an End to End solution for development. 
+                            <li>It provides an End to End solution for developing front end apps. 
                                 <ul>
                                     <li>It is a Meta Framework</li>
                                     <ul>
@@ -617,8 +617,44 @@
                 
                     </ul>
                     <aside class="notes">
-                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's checkout what's under the hood.
+                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's take a closer look.
                     </aside>
+                </section>
+               
+                <section >
+                <section >
+                    <h3>Angular JS</h3>
+                    <img width='700px' src='img/arch.PNG' /><!-- <table width='100%'>
+                        <tr><td width='50%'>
+</td><td style="width: 500px; vertical-align:top"></td>
+                    </table>-->
+                    
+                    <div class='span8'> <ul>
+    <li>A module acts as a container for other AngularJS managed objects.</li>
+    <li>A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding.</li>
+</ul></div>
+ <aside class='notes'>
+Before we see checkout what's under the hood, lets take a high level view of how an Angular based App would be structured and see how its components interact with each other. 
+Here we have an Angular Client consuming a REST API. An Angular client can have one or more modules. A module acts as a container for other AngularJS managed objects 
+(controllers, services, and so on) and manages their lifecycle. Here we have a view (an html partial), a controller and a service. A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding. The Route maps each URL to a View (html partial) and a Controller. When a URL is invoked, a new instance of its associated Controller is created. The controller is injected with all of its dependencies(The service in this case) including a $scope variable inheritied from the $rootScope. The service interacts with the REST Api using 
+
+ </aside>
+                </section>
+                    <section >
+                    <img width='700px' src='img/arch.PNG' /><!-- <table width='100%'>
+                        <tr><td width='50%'>
+</td><td style="width: 500px; vertical-align:top"></td>
+                    </table>-->
+                    
+                    <div class='span8'> <ul>
+    <li>When a URL is invoked, a new instance of its associated Controller is created.</li>
+    <li>This controller is injected with all of its dependencies(The service in this case) including a $scope variable.</li>
+    <li>The service interacts with the REST Api using $resource Angular service and returns the response to the Controller.</li>
+</ul></div>
+ <aside class='notes'>
+When a URL is invoked, a new instance of its associated Controller is created. The controller is injected with all of its dependencies(The service in this case) including a new child $scope variable inherited from the $rootScope. The service interacts with the REST Api using $resource and returns the response to the Controller. The view which is bound to the controller using $scope will now show the updated data coming in from the interaction with the REST api. 
+
+ </aside>
                 </section>
                 </section>
 
