@@ -835,6 +835,165 @@ return MAX_LEN - $scope.message.length;
                         </aside>
                     </section>
                 <section>
+                <section>
+                    <h3>Live Demo</h3>
+                </section>
+                <section>
+
+                    <h4>Walkthrough a Web App with Angular</h4>
+                    <ul>
+                        <li>Brief introduction to the example Application
+                            <ul>
+                                <li>A simple CRUD app</li>
+                                <li>Business use - Bill splitting between friends</li>
+                                <li>Project goal - Promote Community Learning (Open Source)</li>
+
+                            </ul></li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>The application that we are going to go through is a basic CRUD application. It's called Billrive. It is an open source project. The goal of this project is to promote community learning. This application is bascially a testbed for trying out new things. The link to it's GIT repository will be provided at the end. Please feel free to fork.
+                            </li>
+
+
+                        </ul>
+
+                    </aside>
+
+                </section>
+                <section>
+
+                    <h4>Walkthrough a Web App with Angular</h4>
+                    <ul>
+                        <li>Setup
+                            <ul>
+                                <li>Frontend - Angular JS, Bootstrap CSS, Angular Strap</li>
+                                <li>Backend - Java EE, Spring MVC REST, JPA with Hibernate</li>
+                                <li>Database - MySQL</li>
+                                <li>Application Server - Tomcat (Neutral)</li>
+                            </ul></li>
+
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Now let's take a look at it's setup. The application is comprised of two parts. A Backend REST service and an AngularJS client. The frontend is primarily built upon Angular JS, Bootstrap CSS and Angular Strap.
+                            <li>The backend is a Java EE application built using Spring. The persistence layer is built upon JPA with Hibernate as its provider.
+                            </li>
+                            <li>MySQL is the persistence store. Although the application can use any RDBMS data provider</li>
+                            <li>The default Application server for the service is Tomcat although any Java Web container will do fine.</li>
+
+
+                        </ul>
+
+                    </aside>
+
+                </section>
+
+
+
+
+                <section>
+
+                    <h4>Walkthrough a Web App with Angular</h4>
+                    <ul>
+                        <li>Design & Arch
+                            <ul>
+                                <li>Frontend -  MVC</li>
+                                <li>Backend -  MVC</li>
+                                <li>Interface - REST</li>
+                                <li>Data Transfer - JSON</li>
+                            </ul></li>
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Now about the basic architecture of the whole application, Both the frontend and the backend are basically built using the MVC pattern. The backend is a RESTful webservice built using Spring MVC. Data interchange between the service and the client is strictly done through JSON.
+                            </li>
+
+
+                        </ul>
+
+                    </aside>
+
+                </section>
+
+                <section>
+
+                    <h4>Walkthrough</h4>
+                    <ul>
+
+                        <li>Fire up the MySQL DB instance</li>
+                        <li>Start Tomcat and deploy the service. Test an endpoint</li>
+                        <li>Run the client</li>
+                        <li>Use the app</li>
+
+                    </ul>
+
+                    <aside class="notes">
+                        <ul>
+                            <li>Now about the basic architecture of the whole application, Both the frontend and the backend are basically built using the MVC pattern. The backend is a RESTful webservice built using Spring MVC. Data interchange between the service and the client is strictly done through JSON.
+                            </li>
+
+
+                        </ul>
+
+                    </aside>
+
+                </section>
+                </section>
+                
+                <section>
+                    <section>
+                    <h3>Environment - Debugging</h3>
+                    <ul>
+                        <li><a href='https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en' >Angular Batarang</a></li>
+                        <li><a href='https://chrome.google.com/webstore/detail/netbeans-connector/hafdlehgocfcodbgjnpecfajgkeejnaa?hl=en' >Netbeans Chrome Integration</a></li>
+                        <li>Firebug/Chrome Developer Tools</li>
+
+                    </ul>
+                    <aside class="notes">
+                    </aside>
+                </section>
+                <section>
+
+                    <h4>Best Practices</h4>
+
+
+                    <img src='img/ang-pres/toolset.png'/>
+                    <ul>
+                        <li><p><a href="https://github.com/yeoman/yo">Yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build. </p></li>
+                        <li><p><a href="http://gruntjs.com">Grunt</a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. </p></li>
+                        <li><p><a href="http://bower.io">Bower</a> is used for dependency management, so that you no longer have to manually download and manage your scripts.</p></li>
+
+                    </ul>
+
+                </section>
+                <section>
+                    <h2>Resources</h2>
+
+                    <ul>
+                        <li><a href='http://angularjs.org/'>Angular JS Website</a></li>
+                        <ul>
+                            <li><a href='http://docs.angularjs.org/api/'>API Reference</a></li>
+                            <li><a href='http://docs.angularjs.org/guide/'>Developer Guide</a></li>
+                            <li><a href='http://docs.angularjs.org/guide/dev_guide.unit-testing'>Unit Testing</a></li>
+                            <li><a href='https://github.com/angular/angular-seed'>Angular Seed Project</a></li>
+                        </ul>
+                        <li><a href='http://builtwith.angularjs.org'>Built With Angular</a></li>
+                        <li><a href='http://angular-ui.github.io'>Angular UI</a></li>    
+                        <li><a href='http://mgcrea.github.io/angular-strap'>Angular Strap</a></li>
+                        <li><a href='http://www.youtube.com/user/angularjs'>Angular JS Channel on Youtube</a></li>
+                        <li><a href='http://www.youtube.com/watch?v=ZhfUv0spHCY'>Angular JS Best Practices</a></li>
+                        <li><a href='http://www.youtube.com/watch?v=iUQ1fvdO9GY'>Yeoman Tutorial</a></li>
+                        <li><a href='https://groups.google.com/forum/?fromgroups#!forum/angular'>Angular Mailing List</a></li>
+
+                    </ul>
+
+                </section>  
+                </section>
+                <section>
                     <h3>Challenges</h3>
                     <ul>
                         <li>Functional Thinking: JavaScript name sounds close to Java but that's where the similarities end. Support of Closure and other Functional characteristics</li>
@@ -962,156 +1121,8 @@ Working with these modern Javascript libraries and frameworks require using Java
 </code></pre>
                     </section>
                 </section>
-                <section>
-                    <h3>Debugging</h3>
-                    <ul>
-                        <li><a href='https://chrome.google.com/webstore/detail/angularjs-batarang/ighdmehidhipcmcojjgiloacoafjmpfk?hl=en' >Angular Batarang</a></li>
-                        <li><a href='https://chrome.google.com/webstore/detail/netbeans-connector/hafdlehgocfcodbgjnpecfajgkeejnaa?hl=en' >Netbeans Chrome Integration</a></li>
-
-                    </ul>
-                    <aside class="notes">
-                    </aside>
-                </section>
-                <section>
-
-                    <h4>Best Practices</h4>
-
-
-                    <img src='img/ang-pres/toolset.png'/>
-                    <ul>
-                        <li><p><a href="https://github.com/yeoman/yo">Yo</a> scaffolds out a new application, writing your Grunt configuration and pulling in relevant Grunt tasks that you might need for your build. </p></li>
-                        <li><p><a href="http://gruntjs.com">Grunt</a> is used to build, preview and test your project, thanks to help from tasks curated by the Yeoman team and grunt-contrib. </p></li>
-                        <li><p><a href="http://bower.io">Bower</a> is used for dependency management, so that you no longer have to manually download and manage your scripts.</p></li>
-
-                    </ul>
-
-                </section>
-                <section>
-                    <h2>Resources</h2>
-
-                    <ul>
-                        <li><a href='http://angularjs.org/'>Angular JS Website</a></li>
-                        <ul>
-                            <li><a href='http://docs.angularjs.org/api/'>API Reference</a></li>
-                            <li><a href='http://docs.angularjs.org/guide/'>Developer Guide</a></li>
-                            <li><a href='http://docs.angularjs.org/guide/dev_guide.unit-testing'>Unit Testing</a></li>
-                            <li><a href='https://github.com/angular/angular-seed'>Angular Seed Project</a></li>
-                        </ul>
-                        <li><a href='http://builtwith.angularjs.org'>Built With Angular</a></li>
-                        <li><a href='http://angular-ui.github.io'>Angular UI</a></li>    
-                        <li><a href='http://mgcrea.github.io/angular-strap'>Angular Strap</a></li>
-                        <li><a href='http://www.youtube.com/user/angularjs'>Angular JS Channel on Youtube</a></li>
-                        <li><a href='http://www.youtube.com/watch?v=ZhfUv0spHCY'>Angular JS Best Practices</a></li>
-                        <li><a href='http://www.youtube.com/watch?v=iUQ1fvdO9GY'>Yeoman Tutorial</a></li>
-                        <li><a href='https://groups.google.com/forum/?fromgroups#!forum/angular'>Angular Mailing List</a></li>
-
-                    </ul>
-
-                </section>    
-                <section>
-
-                    <h4>Walkthrough a Web App with Angular</h4>
-                    <ul>
-                        <li>Brief introduction to the example Application
-                            <ul>
-                                <li>A simple CRUD app</li>
-                                <li>Business use - Bill splitting between friends</li>
-                                <li>Project goal - Promote Community Learning (Open Source)</li>
-
-                            </ul></li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>The application that we are going to go through is a basic CRUD application. It's called Billrive. It is an open source project. The goal of this project is to promote community learning. This application is bascially a testbed for trying out new things. The link to it's GIT repository will be provided at the end. Please feel free to fork.
-                            </li>
-
-
-                        </ul>
-
-                    </aside>
-
-                </section>
-                <section>
-
-                    <h4>Walkthrough a Web App with Angular</h4>
-                    <ul>
-                        <li>Setup
-                            <ul>
-                                <li>Frontend - Angular JS, Bootstrap CSS, Angular Strap</li>
-                                <li>Backend - Java EE, Spring MVC REST, JPA with Hibernate</li>
-                                <li>Database - MySQL</li>
-                                <li>Application Server - Tomcat (Neutral)</li>
-                            </ul></li>
-
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Now let's take a look at it's setup. The application is comprised of two parts. A Backend REST service and an AngularJS client. The frontend is primarily built upon Angular JS, Bootstrap CSS and Angular Strap.
-                            <li>The backend is a Java EE application built using Spring. The persistence layer is built upon JPA with Hibernate as its provider.
-                            </li>
-                            <li>MySQL is the persistence store. Although the application can use any RDBMS data provider</li>
-                            <li>The default Application server for the service is Tomcat although any Java Web container will do fine.</li>
-
-
-                        </ul>
-
-                    </aside>
-
-                </section>
-
-
-
-
-                <section>
-
-                    <h4>Walkthrough a Web App with Angular</h4>
-                    <ul>
-                        <li>Design & Arch
-                            <ul>
-                                <li>Frontend -  MVC</li>
-                                <li>Backend -  MVC</li>
-                                <li>Interface - REST</li>
-                                <li>Data Transfer - JSON</li>
-                            </ul></li>
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Now about the basic architecture of the whole application, Both the frontend and the backend are basically built using the MVC pattern. The backend is a RESTful webservice built using Spring MVC. Data interchange between the service and the client is strictly done through JSON.
-                            </li>
-
-
-                        </ul>
-
-                    </aside>
-
-                </section>
-
-                <section>
-
-                    <h4>Walkthrough</h4>
-                    <ul>
-
-                        <li>Fire up the MySQL DB instance</li>
-                        <li>Start Tomcat and deploy the service. Test an endpoint</li>
-                        <li>Run the client</li>
-                        <li>Use the app</li>
-
-                    </ul>
-
-                    <aside class="notes">
-                        <ul>
-                            <li>Now about the basic architecture of the whole application, Both the frontend and the backend are basically built using the MVC pattern. The backend is a RESTful webservice built using Spring MVC. Data interchange between the service and the client is strictly done through JSON.
-                            </li>
-
-
-                        </ul>
-
-                    </aside>
-
-                </section>
+                  
+                
 
 
                 <section id="transitions">
