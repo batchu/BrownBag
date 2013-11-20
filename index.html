@@ -623,12 +623,18 @@
                
                 <section >
                 <section >
-                    <h3>Angular JS</h3>
+<!--                    <h3>Angular JS</h3>-->
                     <img width='700px' src='img/arch.PNG' /><!-- <table width='100%'>
                         <tr><td width='50%'>
 </td><td style="width: 500px; vertical-align:top"></td>
                     </table>-->
-                    
+<pre><code data-trim contenteditable>
+//Module declaration
+angular.module('shinyApp', ['global_service_1','global_service_2']);
+//Service declaration
+shinyApp.service('shinyService', function($resource, $q) {
+});
+</code></pre>
                     <div class='span8'> <ul>
     <li>A module acts as a container for other AngularJS managed objects.</li>
     <li>A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding.</li>
@@ -636,12 +642,25 @@
  <aside class='notes'>
 Before we see checkout what's under the hood, lets take a high level view of how an Angular based App would be structured and see how its components interact with each other. 
 Here we have an Angular Client consuming a REST API. An Angular client can have one or more modules. A module acts as a container for other AngularJS managed objects 
-(controllers, services, and so on) and manages their lifecycle. Here we have a view (an html partial), a controller and a service. A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding. The Route maps each URL to a View (html partial) and a Controller. When a URL is invoked, a new instance of its associated Controller is created. The controller is injected with all of its dependencies(The service in this case) including a $scope variable inheritied from the $rootScope. The service interacts with the REST Api using 
+(controllers, services, and so on) and manages their lifecycle. Here we have a view (an html partial), a controller and a service. A controller has a $scope variable which acts as the glue between the controller and the view to enable two way data binding. The Route maps each URL to a View (html partial) and a Controller.
 
  </aside>
                 </section>
                     <section >
-                    <img width='700px' src='img/arch.PNG' /><!-- <table width='100%'>
+                    <!--<img width='700px' src='img/arch.PNG' />-->
+                    
+<pre><code data-trim contenteditable>
+//Controller declaration
+shinyApp.controller('shinyCtrl', function($scope,shinyService) {
+//Everything in $scope will be made available to the html partial
+$scope.message = shinyService.getMessage();//'Hello World';
+});
+</code></pre>
+<pre><code data-trim contenteditable>
+<!--HTML Partial -->
+{{message}} <!-- outputs Hello World-->
+</code></pre>
+                    <!-- <table width='100%'>
                         <tr><td width='50%'>
 </td><td style="width: 500px; vertical-align:top"></td>
                     </table>-->
