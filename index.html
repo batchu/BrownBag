@@ -349,7 +349,7 @@
                     </section>
                     
                     <section>
-                        <h4>Developer community's reaction<!-- to facilitate this paradigm shift--></h4>
+                        <h4>Developer community's response<!-- to facilitate this paradigm shift--></h4>
 
                         <div class="span6">
 
@@ -639,47 +639,10 @@ Angular JS represents one such framework which embraces this new paradigm shift.
                 
                     </ul>
                     <aside class="notes">
-                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. Let's take about Declarative style of programming a bit.
+                        Angular borrows a lot of design practices from several backend technologies like Java, Spring and others. It supports a modular architecture in designing front End web apps using MV* design pattern. So in Angular you hear a lot about Modules, Controllers, Views and Services. All of these components are wired together using the Dependency Injection design pattern. Angular supports testing from the ground up. Since DI is supported, writing tests becomes much easier. You can use the mocks that come with the Angular source to bootstrap your test environment. There is also an eco-system of tools to perform build tasks, dependency management just like we use Maven or Gradle in the backend. Angular promotes Declarative style of programming for the frontend as opposted to an imperative style which is best suited for the backend. This reduces linking DOM with JS code. 
                     </aside>
                 </section>
-               <section>
-                        <h4>Declarative vs Imperative for the Front End</h4>
-                        <img src='img/declarative.png' />
-<pre><code data-trim contenteditable>
-<div class="container" ng-controller="TextAreaWithLimitCtrl">
-<div class="row">
-<textarea ng-model="message">{{message}}</textarea>
-</div>
-<div class="row">
-<button ng-click="send()">Send</button>
-<button ng-click="clear()">Clear</button>
-</div>
-</div> 
-</code></pre>                        
-<pre><code data-trim contenteditable>
-//Number of remaining characters - HTML
-<span>Remaining: {{remaining()}}</span>
-//Corresponding JS code
-$scope.remaining= function () {
-return MAX_LEN - $scope.message.length;
-};
-</code></pre>                        
-<pre><code data-trim contenteditable>
-<!-- Disabling the button if the length is invalid -->
-<button ng-disabled="!hasValidLength()"...>Send</button>
-</code></pre>                        
-                        
-                        <aside class="notes">
-                            Declarative style of programming suits front end HTML development better. Imperative style is ideal for the backend but not so much for the frontend. let's understand it better with a simple example.
-                             Here we have a small message box. The simple requirements here are
-                             The Send button's disabled state must be properly managed
- The Remaining charecter length should be updated as the user continues to type.
- The code snippets show the declarative approach.
- 
-  Angular promotes declarative style of programming for the front end. 
-                            
-                        </aside>
-                    </section>
+               
                 <section >
                 <section >
 <!--                    <h3>Angular JS</h3>-->
@@ -816,12 +779,61 @@ When a URL is invoked, a new instance of its associated Controller is created. T
 
                         <img src="img/ang-pres/reuse3.png" />
                         <aside class="notes">
-                            So reusable components feature in Angular is built with existing JS & DOM APIs. It's available in all the browsers. And it is also being proposed to become native for all modern browsers. It's already been implemented in Chrome Dev versions.
+                            So reusable components feature in Angular is built with existing JS & DOM APIs. It's available in all the browsers. And it is also being proposed to become native for all modern browsers. It's already been implemented in Chrome Dev versions. 
+                            <!--Now Let's take about Declarative style of programming a bit.-->
                         </aside>
                     </section>
 
                 </section>  
-                
+                <section>
+                        <h4>Type in your Name</h4>
+                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/QSFh7/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+                        <aside class="notes">
+                          Here we have another simple example to demonstrate the two way binding of angular. This simple app doesn't use the angular's modular features for the sake of simplicity.
+                          If we take a look at the html source, we declared ng-app as a div attribute which implies that angular's scope is limited to this specific div. 
+                          The input field has a ng-model attribute titled 'name'. We are again displaying the same by decorating name with flower brackets a couple of lines below. So the input box and this name decolared with flower brackets point to the same model behind the scenes.
+                          As we begin to type in the text box, we notice that the text next to "hello" gets updated. So What angular is doing behind the scenes as we start interacting with the text field is that it is updating the model in the javascript with the user changes. Since both the textbox and the text next to 'hello' subscribe to the same model, the changes made to the textbox will now be propagated to the text display next to Hello.
+                          
+                        </aside>
+                    </section>
+                <section>
+                        <h4>Declarative vs Imperative for the Front End</h4>
+                        <img src='img/declarative.png' />
+<pre><code data-trim contenteditable>
+<div class="container" ng-controller="TextAreaWithLimitCtrl">
+<span>Remaining: {{remaining()}}</span>
+<textarea ng-model="message">{{message}}</textarea>
+<button ng-click="send()">Send</button>
+<button ng-click="clear()">Clear</button>
+</div> 
+</code></pre>                        
+<pre><code data-trim contenteditable>
+//Number of remaining characters - HTML
+<span>Remaining: {{remaining()}}</span>
+//Corresponding JS code
+$scope.remaining= function () {
+return MAX_LEN - $scope.message.length;
+};
+</code></pre>                        
+<pre><code data-trim contenteditable>
+<!-- Disabling the button if the length is invalid -->
+<button ng-disabled="!hasValidLength()"...>Send</button>
+</code></pre>                        
+                        
+                        <aside class="notes">
+                            Declarative style of programming suits front end HTML development better. Imperative style is ideal for the backend but not so much for the frontend. let's understand it better with a simple example.
+                             Here we have a small message box. The simple requirements here are
+                             The Send button's disabled state must be properly managed
+ The Remaining charecter length should be updated as the user continues to type.
+ The code snippets show the declarative approach.
+  The first snippet shows the html markup to generate the view.
+ The flower brackets decoraate the remaining() function. So the output of the remaining() function is displayed as the result. Similarly the message attribute's value is displayed in the next line. We will talk about how this two way data binding works in a bit.
+ The buttons are decorated with ng-click attributes which are Angular's naive directives. They pretty much call their respective functions on upon button clicking. 
+ 
+  Angular promotes declarative style of programming for the front end. 
+                            
+                        </aside>
+                    </section>
                 <section>
                     <h3>Challenges</h3>
                     <ul>
@@ -865,32 +877,7 @@ Working with these modern Javascript libraries and frameworks require using Java
                                     <code>Hello World!</code></li>
                         </aside>
                     </section>
-                    <section>
-                        <h4>Type in your Name</h4>
-                        <iframe width="100%" height="300" src="http://jsfiddle.net/uhsarp/QSFh7/2/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-                        <aside class="notes">
-                            <ol>
-                                <li>During the compilation phase:
-                                    <ol><li>the <a href="api/ng.directive:ngModel"><code>ng-model</code></a> and <a href="api/ng.directive:input"><code>input</code></a> <a href="guide/directive">directive</a> set up a <code>keydown</code> listener on the <code>&lt;input&gt;</code> control.</li>
-                                        <li>the <a href="api/ng.$interpolate"><code>{{name}}</code></a> interpolation
-                                            sets up a <a href="api/ng.$rootScope.Scope#$watch"><code>$watch</code></a> to be notified of
-                                            <code>name</code> changes.</li></ol></li>
-                                <li>During the runtime phase:
-                                    <ol><li>Pressing an '<code>X</code>' key causes the browser to emit a <code>keydown</code> event on the input control.</li>
-                                        <li>The <a href="api/ng.directive:input"><code>input</code></a> directive
-                                            captures the change to the input's value and calls <a href="api/ng.$rootScope.Scope#$apply"><code>$apply</code></a><code>("name = 'X';")</code> to update the
-                                            application model inside the Angular execution context.</li>
-                                        <li>Angular applies the <code>name = 'X';</code> to the model.</li>
-                                        <li>The <a href="api/ng.$rootScope.Scope#$digest"><code>$digest</code></a> loop begins</li>
-                                        <li>The <a href="api/ng.$rootScope.Scope#$watch"><code>$watch</code></a> list detects a change
-                                            on the <code>name</code> property and notifies the <a href="api/ng.$interpolate"><code>{{name}}</code></a> interpolation, which in turn updates the DOM.</li>
-                                        <li>Angular exits the execution context, which in turn exits the <code>keydown</code> event and with it
-                                            the JavaScript execution context.</li>
-                                        <li>The browser re-renders the view with update text.</li></ol></li>
-                            </ol>
-                            Let's understand another angular concept called $scope. After that we'll build a nice little TODO app.
-                        </aside>
-                    </section>
+                    
                     
                 <section>
                         <img src="img/ang-pres/scope.png" />
